@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Visit counter: anyone can increment it (page load), only the logged-in
+    // admin can read the total.
+    match /stats/visits {
+      allow get: if request.auth != null;
+      allow create, update: if true;
+    }
+
+    // Orders: any customer can submit one, only the logged-in admin can
+    // read, update (mark done) or delete.
+    match /orders/{orderId} {
+      allow create: if request.resource.data.name is string
+        && request.resource.data.phone is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.phone.size() > 0;
+      allow read, update, delete: if request.auth != null;
+    }
+
+    // Variety inquiries: same pattern as orders.
+    match /inquiries/{inquiryId} {
+      allow create: if request.resource.data.name is string
+        && request.resource.data.phone is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.phone.size() > 0;
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}
