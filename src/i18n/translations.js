@@ -83,6 +83,7 @@ export const translations = {
       heading: "எங்கள் கதை",
       p1: "Mandaadi Fresh Seafoods ஒரு எளிய வாக்குறுதியோடு ஆரம்பித்தது — கடலோர குடும்பங்கள் நம்பும் அதே புதிய, மெய்யான கடல் உணவை சென்னை & பெங்களூரு வீட்டு வாசல்களுக்கு கொண்டு வருவது.",
       p2: "ஒவ்வொரு பிடிப்பும் தினமும் நேரடியாக வாங்கப்பட்டு, சுத்தமா handle பண்ணி, வேகமா டெலிவரி ஆகுது — middleman இல்ல, freshness-ல compromise இல்ல. அதனாலதான் 20,000+ followers எங்க page-ஐ தினமும் நம்புறாங்க.",
+      partnersIntro: "11 மீனவர் influencers சேர்ந்து தொடங்கியது — கடலில் இருந்து நேரடியாக ஒவ்வொரு வீட்டுக்கும் புதிய, தரமான கடல் உணவை கொண்டு வர:",
       follow: "-ஐ Follow பண்ணுங்க",
     },
     contact: {
@@ -251,6 +252,7 @@ export const translations = {
       heading: "Our Story",
       p1: "Mandaadi Fresh Seafoods started with a simple promise — to bring the same fresh, real seafood coastal families trust, straight to doorsteps in Chennai & Bangalore.",
       p2: "Every catch is bought fresh daily, handled cleanly, and delivered fast — no middlemen, no compromise on freshness. That's why 20,000+ followers trust our page every day.",
+      partnersIntro: "Started by 11 fisherman influencers, working together to bring fresh, quality seafood directly from the sea to every home:",
       follow: "Follow ",
     },
     contact: {

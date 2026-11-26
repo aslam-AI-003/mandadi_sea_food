@@ -1,6 +1,18 @@
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../data/constants"
 import { useLang } from "../i18n/LanguageContext"
 
+const PARTNERS = [
+  "Ungal Meenavan",
+  "Kadal Meenavan",
+  "Nagai Meenavan",
+  "Tiruchendur Meenavan",
+  "Thoothukudi Meenavan",
+  "Indian Ocean Fisherman",
+  "Fisherman Voice",
+  "KK Jack Sparrow Fishing",
+  "Anthony Alaripai",
+]
+
 export default function About() {
   const { t, lang } = useLang()
   return (
@@ -10,6 +22,17 @@ export default function About() {
           <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">{t("about.heading")}</h2>
           <p className="text-white/80 mb-4 leading-relaxed">{t("about.p1")}</p>
           <p className="text-white/80 mb-6 leading-relaxed">{t("about.p2")}</p>
+          <p className="text-white/80 mb-3 leading-relaxed">{t("about.partnersIntro")}</p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {PARTNERS.map((name) => (
+              <span
+                key={name}
+                className="bg-white/10 border border-white/15 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
